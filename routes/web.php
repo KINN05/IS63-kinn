@@ -15,5 +15,6 @@ Route::get('/master', function () {
     return view('layout.master');
 });
 
-Route::get('mahasiswa', [MahasiswaController::class, 'index']);
-Route::get('mahasiswa/tambah', [MahasiswaController::class, 'index']);
+//modul mahasiswa
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+Route::get('/mahasiswa/tambah', [MahasiswaController::class, 'create']);
