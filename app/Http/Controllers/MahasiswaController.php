@@ -19,7 +19,8 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        //
+        //disini hasil eksekusi dari klik tombol tambah data di form mahasiswa.index
+        return view ('mahasiswa.form');
     }
 
     /**

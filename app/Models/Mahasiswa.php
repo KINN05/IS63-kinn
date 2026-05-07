@@ -22,6 +22,6 @@ class Mahasiswa extends Model
     'jenis_kelamin',
     'tahun_masuk',
     ];
-    
-    
+
+
 }
