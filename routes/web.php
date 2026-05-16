@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\JurusanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 
@@ -22,3 +23,11 @@ Route::post('/mahasiswa', [MahasiswaController::class, 'store']);
 Route::get('/mahasiswa/edit/{id}', [MahasiswaController::class, 'edit']);
 Route::put('/mahasiswa/{id}', [MahasiswaController::class, 'update']);
 Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'destroy']);
+
+//modul jurusan
+Route::get('/jurusan', [JurusanController::class, 'index']);
+Route::get('/jurusan/tambah', [JurusanController::class, 'create']);
+Route::post('/jurusan', [JurusanController::class, 'store']);
+Route::get('/jurusan/edit/{id}', [JurusanController::class, 'edit']);
+Route::put('/jurusan/{id}', [JurusanController::class, 'update']);
+Route::delete('/jurusan/{id}', [JurusanController::class, 'destroy']);

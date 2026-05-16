@@ -81,7 +81,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="/jurusan">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Data Jurusan</span></a>
             </li>
@@ -152,7 +152,7 @@
                             </div>
                         </li>
 
-                        
+
 
                         <!-- Nav Item - Messages -->
 
@@ -164,8 +164,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -258,7 +257,7 @@
     <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}""></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('js/sb-admin-2.min.js') }}""></script>
+    <script src=" {{ asset('js/sb-admin-2.min.js') }}""></script>
 
 </body>
 
