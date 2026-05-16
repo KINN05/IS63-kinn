@@ -36,8 +36,16 @@ Data Mahasiswa
                         <td>{{ $x->tempat_lahir }}, {{ $x->tanggal_lahir }}</td>
                         <td>
                             <a href="/mahasiswa/edit/{{ $x->id }}" class="btn btn-outline-info">Edit</a>
-                            <a href="/mahasiswa/hapus/{{ $x->id }}" class="btn btn-outline-danger"
-                                onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a>
+
+                            <form onclick="return confirm('Yakin ingin menghapus data ini?')" action="
+                                /mahasiswa/{{ $x->id }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-outline-danger" type="submit">Hapus</button>
+                            </form>
+
+                            <!-- <a href="/mahasiswa/hapus/{{ $x->id }}" class="btn btn-outline-danger"
+                                onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a> -->
                         </td>
                     </tr>
 
@@ -57,24 +65,24 @@ Data Mahasiswa
 
 @if(session('success'))
 <script>
-    Swal.fire({
-        icon: "success",
-        title: "BERHASIL",
-        text: "{{ session('success') }}",
-        showConfirmButton: false,
-        timer: 2000
-    });
+Swal.fire({
+    icon: "success",
+    title: "BERHASIL",
+    text: "{{ session('success') }}",
+    showConfirmButton: false,
+    timer: 2000
+});
 </script>
 @endif
 @if(session('error'))
 <script>
-    Swal.fire({
-        icon: "error",
-        title: "GAGAL!",
-        text: "{{ session('error') }}",
-        showConfirmButton: false,
-        timer: 2000
-    });
+Swal.fire({
+    icon: "error",
+    title: "GAGAL!",
+    text: "{{ session('error') }}",
+    showConfirmButton: false,
+    timer: 2000
+});
 </script>
 @endif
 
